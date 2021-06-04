@@ -51,6 +51,7 @@ internal func removeSessionHandler(for uuid: String) {
 }
 
 /// All objects set to `FileProviderRemote.session` must be an instance of this class
+@objc(FPSessionDelegate)
 final public class SessionDelegate: NSObject, URLSessionDataDelegate, URLSessionDownloadDelegate, URLSessionStreamDelegate {
     
     weak var fileProvider: (FileProviderBasicRemote & FileProviderOperations)?
